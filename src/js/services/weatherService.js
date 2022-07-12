@@ -30,7 +30,7 @@ async function getCurrWeatherData(locationId) {
     if (!locationId) locationId = '215854'
     const currData = storageService.load('currWeatherData')
     const isFavorite = _findSavedWeather(locationId)
-    const isCurrDay = new Date(currData.LocalObservationDateTime).getDate() === new Date(Date.now()).getDate()
+    const isCurrDay = (new Date(currData?.LocalObservationDateTime).getDate() === new Date(Date.now()).getDate()) || false
     if (isCurrDay && (currData?.locationId === locationId)) return {...currData, isFavorite}
     console.log('New day, getting new weather data')
     const res = await axios.get(
@@ -50,7 +50,7 @@ async function getForecastWeatherData(locationId, cityName) {
     if (!locationId) locationId = '215854'
     if (!cityName) cityName = 'Tel Aviv'
     const currData = storageService.load('forecastWeatherData')
-    const isCurrDay = new Date(currData.sampledTimestamp).getDate() === new Date(Date.now()).getDate()
+    const isCurrDay = (new Date(currData?.sampledTimestamp).getDate() === new Date(Date.now()).getDate()) || false
     if (isCurrDay && (currData?.locationId === locationId)) return currData
     console.log('New day, getting new forecast weather data')
     const res = await axios.get(
