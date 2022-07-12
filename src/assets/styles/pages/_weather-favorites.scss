@@ -1,0 +1,53 @@
+.main-weather-fav-container {
+  padding: 2rem;
+  min-height: 100vh;
+  padding-top: 115px;
+  padding-bottom: 90px;
+  text-align: center;
+  &.light-mode{
+    background-image: linear-gradient(0deg, #d8eeee, #d8eeee 25%, #64adc9 65%);
+  }
+  &.dark-mode{
+    background-color: rgba(0, 0, 0, 0.9215686275);
+  }
+
+  .fav-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    .main-fav-preview-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      // background-color: #005986;
+      background-image: url(https://www.mnhyachts.com/wp-content/uploads/2016/08/Blue-Sea-Sky-Clouds1.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 250px;
+      border-radius: 10px;
+      box-shadow: -1px 1px 8px 0px lightgray;
+      transition: all 0.5s;
+      cursor: pointer;
+      & > h2 {
+        font-size: 5rem;
+      }
+      & > h3 {
+        font-size: 1.6rem;
+      }
+      & > h4 {
+        font-size: 1.2rem;
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 10px;
+        width: 250px;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

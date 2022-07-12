@@ -1,0 +1,29 @@
+// Setup
+
+// @import './setup/variables';
+// @import './setup/functions';
+// @import './setup/mixins';
+@import './setup/typography';
+@import './setup/layout';
+
+// Basics
+
+@import './basics/base';
+@import './basics/animations';
+@import './basics/helpers';
+
+// Loader
+
+// @import './cmps/loader';
+
+// Components
+
+@import './cmps/app-header';
+@import './cmps/app-footer';
+@import './cmps/weather-filter';
+@import './cmps/current-weather';
+
+
+// Pages
+@import './pages/weather-app';
+@import './pages/weather-favorites';

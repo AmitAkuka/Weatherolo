@@ -1,0 +1,16 @@
+.main-footer-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: whitesmoke;
+  &.light-mode{
+    background-color: #005986;
+  }
+  &.dark-mode{
+    background-color: black;
+  }
+}

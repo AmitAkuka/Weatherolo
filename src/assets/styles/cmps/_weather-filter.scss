@@ -1,0 +1,39 @@
+.main-filter-container {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+
+  .filter-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 30px;
+    gap: 5px;
+    &.light-mode{
+      color: white;
+      background-color: #337a9e;
+      & label{
+        color: white;
+      }
+    }
+    &.dark-mode{
+      color: black;
+      background-color: white;
+      & label{
+        color: black;
+      }
+    }
+
+    & > input {
+      border: none;
+      background-color: inherit;
+      outline: none;
+    }
+  }
+}
+
+.MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  border: none !important;
+  outline: none !important;
+  border-width: 0 !important;
+}

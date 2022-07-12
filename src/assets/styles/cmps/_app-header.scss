@@ -1,0 +1,107 @@
+.main-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  font-family: 'Oswald';
+
+  &.dark-mode {
+    background-color: black;
+  }
+  &.light-mode {
+    background-color: #005986;
+  }
+
+  .header-btns-container {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    // & > a {
+    //   &.active {
+    //     text-decoration: underline;
+    //   }
+    // }
+  }
+
+  .header-toggle-btns-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hamburger-menu-container {
+    height: 38px;
+    display: none;
+
+    .hamburger-menu {
+      height: 100%;
+      width: 100%;
+      fill: white;
+      cursor: pointer;
+    }
+  }
+
+  .main-menu-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 5;
+    min-height: 100vh;
+    top: 66px;
+    width: 100%;
+    left: 0;
+    transition: all 0.25s ease-in-out 0s;
+    &.light-mode {
+      background-image: linear-gradient(
+        0deg,
+        #d8eeee,
+        #d8eeee 25%,
+        #64adc9 65%
+      );
+    }
+    &.dark-mode {
+      background-color: black;
+    }
+
+    & > a,
+    & > .header-toggle-btns-container {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      border-bottom: 1px solid black;
+
+      &:hover {
+        opacity: 0.9;
+        background-color: #005986;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .main-header-container {
+    & > .header-toggle-btns-container,
+    & > .header-btns-container {
+      display: none;
+    }
+    .hamburger-menu-container {
+      display: block;
+    }
+  }
+}
+
+.MuiButtonBase-root.MuiToggleButton-root.MuiToggleButton-sizeMedium.MuiToggleButton-standard.MuiToggleButtonGroup-grouped.MuiToggleButtonGroup-groupedHorizontal.css-1targ6f-MuiButtonBase-root-MuiToggleButton-root {
+  background-color: darkgray;
+  font-weight: 700;
+  &:hover {
+    background-color: rgb(214, 214, 214);
+  }
+
+  &.Mui-selected {
+    background-color: white;
+  }
+}
