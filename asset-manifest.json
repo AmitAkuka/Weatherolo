@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Weatherolo/static/css/main.7f19d7b1.css",
+    "main.css": "/Weatherolo/static/css/main.dbbe4040.css",
     "main.js": "/Weatherolo/static/js/main.6ae4ceff.js",
     "static/media/weather-loader.gif": "/Weatherolo/static/media/weather-loader.68c1d873cd633501356e.gif",
     "static/media/Oswald-VariableFont_wght.ttf": "/Weatherolo/static/media/Oswald-VariableFont_wght.ee815f542584c61b67c2.ttf",
@@ -10,11 +10,11 @@
     "static/media/overcast-night.svg": "/Weatherolo/static/media/overcast-night.be323821eaff61f0a14eeecb64b0147f.svg",
     "static/media/overcast-day.svg": "/Weatherolo/static/media/overcast-day.8632010bebb9d500d568b01d3374be24.svg",
     "index.html": "/Weatherolo/index.html",
-    "main.7f19d7b1.css.map": "/Weatherolo/static/css/main.7f19d7b1.css.map",
+    "main.dbbe4040.css.map": "/Weatherolo/static/css/main.dbbe4040.css.map",
     "main.6ae4ceff.js.map": "/Weatherolo/static/js/main.6ae4ceff.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f19d7b1.css",
+    "static/css/main.dbbe4040.css",
     "static/js/main.6ae4ceff.js"
   ]
 }
