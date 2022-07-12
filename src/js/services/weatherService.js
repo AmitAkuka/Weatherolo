@@ -17,7 +17,7 @@ const API_KEY = 'DWeGXPCDGrjPrORkwANtJfFonzj4ANxE'
 async function getCityAutoComplete(city) {
   try {
     const { data } = await axios.get(
-      `http://dataservice.accuweather.com/locations/v1/cities/autocomplete?q=${city}&apikey=${API_KEY}`
+      `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?q=${city}&apikey=${API_KEY}`
     )
     return data
   } catch (err) {
@@ -34,7 +34,7 @@ async function getCurrWeatherData(locationId) {
     if (isCurrDay && (currData?.locationId === locationId)) return {...currData, isFavorite}
     console.log('New day, getting new weather data')
     const res = await axios.get(
-      `http://dataservice.accuweather.com/currentconditions/v1/${locationId}?apikey=${API_KEY}`
+      `https://dataservice.accuweather.com/currentconditions/v1/${locationId}?apikey=${API_KEY}`
     )
     const data = { ...res.data[0], locationId, isFavorite }
     storageService.save('currWeatherData', data)
@@ -54,7 +54,7 @@ async function getForecastWeatherData(locationId, cityName) {
     if (isCurrDay && (currData?.locationId === locationId)) return currData
     console.log('New day, getting new forecast weather data')
     const res = await axios.get(
-      `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationId}?apikey=${API_KEY}`
+      `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationId}?apikey=${API_KEY}`
     )
     const data = {
       ...res.data,
@@ -71,7 +71,7 @@ async function getForecastWeatherData(locationId, cityName) {
 
 async function getLocationByCoords({ latitude,longitude }){
   try {
-    const res = await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude},${longitude}`)
+    const res = await axios.get(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${latitude},${longitude}`)
     const { Key, EnglishName } = res.data
     return { id: Key, name: EnglishName }
   } catch (err) {
